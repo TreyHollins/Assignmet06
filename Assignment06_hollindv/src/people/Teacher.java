@@ -1,14 +1,12 @@
 package people;
 
-import work.Work;
-
-public class Teacher extends Person implements Work{
+public class Teacher extends Person{
 	
-	private Boolean isWorking;
+	private Boolean isWorking = false;
 
 	public Teacher(String LastName, String FirstName) {
 		super(LastName, FirstName);
-		isWorking = false;
+		
 	}
 	/***
 	 * Get isWorking
@@ -25,22 +23,20 @@ public class Teacher extends Person implements Work{
 		this.isWorking = isWorking;
 	}
 	
-	public String toString() {
-		return super.toString() + " Working: " + isWorking;
-	}
-
 	@Override
 	public void work() {
-		
+		isWorking = true;
 		
 	}
 
 	@Override
 	public void stopWorking() {
-		
+		isWorking = false;
 		
 	}
 
-	
+	public String toString() {
+		return super.toString() + " Working: " + isWorking;
+	}
 
 }
