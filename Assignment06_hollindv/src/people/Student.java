@@ -8,7 +8,7 @@ public class Student extends Person implements Work{
 	
 	public Student(String LastName, String FirstName) {
 		super(LastName, FirstName);
-		isWorking = false;
+		isWorking = true;
 	}
 	/***
 	 * Gets isWorking
